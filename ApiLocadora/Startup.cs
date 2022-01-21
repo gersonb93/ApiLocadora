@@ -35,6 +35,17 @@ namespace ApiLocadora
             var connection = Configuration["MySQLConnection:MySQLConnectionString"];
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
 
+            /*
+             services.AddDbContext<SQLContex>(options => 
+                    options.UseSqlServer(Configuration.GetConnectionString(MySQLConnectionString)));
+
+            pacote => Microsoft.Entity.FrameworkCore.SqlServer
+            pacote => Microsoft.Entity.FrameworkCore.Tools -- para instalar a migration
+
+             */
+
+
+
             services.AddMvc(options =>
             {
                 options.RespectBrowserAcceptHeader = true;

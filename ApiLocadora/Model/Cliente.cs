@@ -15,7 +15,7 @@ namespace ApiLocadora.Model
       
         public DateTime DataNascimento { get; set; }
 
-        public virtual ICollection<Locacao> Locacoes { get; set; }
+        public ICollection<Locacao> Locacoes { get; set; } = new List<Locacao>();
 
         public Cliente(string nome, string cPF, DateTime dataNascimento)
         {

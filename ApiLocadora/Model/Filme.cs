@@ -11,7 +11,7 @@ namespace ApiLocadora.Model
         public int ClassificacaoIndicativa { get; set; }
         public byte Lancamento { get; set; }
 
-        public virtual ICollection<Locacao> Locacoes { get; set; }
+        public ICollection<Locacao> Locacoes { get; set; } = new List<Locacao>();
 
         public Filme(string titulo, int classificacaoIndicativa, byte lancamento)
         {
